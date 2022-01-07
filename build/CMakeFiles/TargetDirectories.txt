@@ -1,7 +1,0 @@
-/home/Kim.He/mdpro/QCS40X_WS/LE.UM.4.1.2/apps_proc/poky/meta-ark/recipes-multimedia/spr_client/files/build/CMakeFiles/install.dir
-/home/Kim.He/mdpro/QCS40X_WS/LE.UM.4.1.2/apps_proc/poky/meta-ark/recipes-multimedia/spr_client/files/build/CMakeFiles/list_install_components.dir
-/home/Kim.He/mdpro/QCS40X_WS/LE.UM.4.1.2/apps_proc/poky/meta-ark/recipes-multimedia/spr_client/files/build/CMakeFiles/rebuild_cache.dir
-/home/Kim.He/mdpro/QCS40X_WS/LE.UM.4.1.2/apps_proc/poky/meta-ark/recipes-multimedia/spr_client/files/build/CMakeFiles/spr_client.dir
-/home/Kim.He/mdpro/QCS40X_WS/LE.UM.4.1.2/apps_proc/poky/meta-ark/recipes-multimedia/spr_client/files/build/CMakeFiles/install/local.dir
-/home/Kim.He/mdpro/QCS40X_WS/LE.UM.4.1.2/apps_proc/poky/meta-ark/recipes-multimedia/spr_client/files/build/CMakeFiles/install/strip.dir
-/home/Kim.He/mdpro/QCS40X_WS/LE.UM.4.1.2/apps_proc/poky/meta-ark/recipes-multimedia/spr_client/files/build/CMakeFiles/edit_cache.dir
