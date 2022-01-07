@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/spr_client.dir/spr_client.cpp.o CMakeFiles/spr_client.dir/browseZeroConf/browse_bonjour.cpp.o  -o spr_client -rdynamic -lpthread -ldns_sd /usr/local/lib/libboost_thread.so.1.72.0 -lpthread 
