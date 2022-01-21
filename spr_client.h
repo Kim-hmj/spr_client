@@ -25,7 +25,7 @@ public:
     void Stop();
     
 private:
-    using MdnsHandler = std::function<void(const boost::system::error_code& ec, const std::string& host, uint16_t port)>;
+    using MdnsHandler = std::function<void(/*const boost::system::error_code& ec,*/ const std::string& host, uint16_t port)>;
     using ResultHandler = std::function<void(const boost::system::error_code&)>;
     void browseMdns(const MdnsHandler& handler);
     void connect(string host);

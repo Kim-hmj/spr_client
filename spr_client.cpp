@@ -21,10 +21,11 @@ void Client::Start()
 {
  if (settings_.server.host.empty())
     {
-        browseMdns([this](const boost::system::error_code& ec, const std::string& host, uint16_t port) {
-            if (ec)
+        browseMdns([this](/*const boost::system::error_code& ec,*/ const std::string& host, uint16_t port) {
+            int a = 0;
+            if (a != 0)
             {
-                cout << "Failed to browse MDNS, error: " << ec.message() << "\n";
+                cout << "Failed to browse MDNS, error: " << a << "\n";
             } else {
                 settings_.server.host = host;
                 settings_.server.port = 1000;
@@ -41,7 +42,7 @@ void Client::connect(string host)
 {
     while(1){
         std::this_thread::sleep_for(std::chrono::seconds(2));
-        cout << "host = " << host << endl;
+        cout << "host__ = " << host << endl;
     }
     // io_service iosev;
     // ip::tcp::socket socket(iosev);
@@ -74,7 +75,7 @@ void Client::browseMdns(const MdnsHandler& handler)
             uint16_t port = avahiResult.port;
             if (avahiResult.ip_version == IPVersion::IPv6)
                 host += "%" + cpt::to_string(avahiResult.iface_idx);
-                handler({}, host, port);
+                handler(host, port);
                 return;
         }
     }

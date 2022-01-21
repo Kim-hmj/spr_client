@@ -20,7 +20,7 @@ INCLUDE_DIRECTORIES(${SERVER_INCLUDE})
 #pkg_check_modules(PROCESS_CPP process-cpp)
 
 ADD_EXECUTABLE(${PROJECT_NAME} ${SRC_LIST})
-target_compile_options(${PROJECT_NAME} PUBLIC -O -g -std=c++11)
+target_compile_options(${PROJECT_NAME} PUBLIC -O -g -std=c++14)
 
 target_link_libraries(
     ${PROJECT_NAME}
@@ -35,7 +35,7 @@ target_link_libraries(
     # ${Boost_LIBRARIES}
 )
 
-include_directories(${Boost_INCLUDE_DIRS})
+#include_directories(${Boost_INCLUDE_DIRS})
 
 target_include_directories(
   ${PROJECT_NAME} PUBLIC
