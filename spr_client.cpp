@@ -2,17 +2,17 @@
 //#include <adk/log.h>
 
 #include <sys/resource.h>
-#include <boost/thread/thread.hpp> 
-#include <boost/thread/mutex.hpp>
+//#include <boost/thread/thread.hpp> 
+//#include <boost/thread/mutex.hpp>
 #include <vector>
 #include "browse_mdns.hpp"
 #include "common/settings.hpp"
 #include "common/str_compat.hpp"
 #include "spr_client.h"
 using namespace std;
-using boost::asio::ip::tcp;
+//using boost::asio::ip::tcp;
 
-using namespace boost::asio;
+//using namespace boost::asio;
 Client::Client() {
 }
 Client::~Client() = default;
@@ -39,18 +39,22 @@ void Client::Start()
 }
 void Client::connect(string host)
 {
-    io_service iosev;
-    ip::tcp::socket socket(iosev);
-    ip::tcp::endpoint ep(ip::address_v4::from_string(host), 1000);
-    boost::system::error_code ec;
-    socket.connect(ep,ec);
-    if(ec)
-    {
-        std::cout << boost::system::system_error(ec).what() << std::endl;
+    while(1){
+        std::this_thread::sleep_for(std::chrono::seconds(2));
+        cout << "host = " << host << endl;
     }
-    char buf[100];
-    size_t len=socket.read_some(buffer(buf), ec);
-    std::cout.write(buf, len);
+    // io_service iosev;
+    // ip::tcp::socket socket(iosev);
+    // ip::tcp::endpoint ep(ip::address_v4::from_string(host), 1000);
+    // boost::system::error_code ec;
+    // socket.connect(ep,ec);
+    // if(ec)
+    // {
+    //     std::cout << boost::system::system_error(ec).what() << std::endl;
+    // }
+    // char buf[100];
+    // size_t len=socket.read_some(buffer(buf), ec);
+    // std::cout.write(buf, len);
 }
 void Client::Stop()
 {
@@ -83,7 +87,7 @@ void Client::browseMdns(const MdnsHandler& handler)
 
 int main(void)
 {
-        boost::asio::io_context io_context;
+        //boost::asio::io_context io_context;
 
         auto client = std::make_shared<Client>();
         client->Start();
