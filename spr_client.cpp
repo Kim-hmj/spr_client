@@ -69,7 +69,7 @@ void Client::browseMdns(const MdnsHandler& handler)
     {
         BrowseZeroConf browser;
         mDNSResult avahiResult;
-        if (browser.browse(string(sn_num), "_controller._tcp.","wlan0", avahiResult, 0))
+        if (browser.browse(string(sn_num), "_controller._tcp.","en0", avahiResult, 0))
         {
             string host = avahiResult.ip;
             uint16_t port = avahiResult.port;

@@ -2,8 +2,8 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.8 FATAL_ERROR)
 
 PROJECT(spr_client)
 set(CMAKE_CXX_STANDARD 14) 
-find_package(PkgConfig REQUIRED)
-find_package( REQUIRED COMPONENTS thread)#Boost
+#find_package(PkgConfig REQUIRED)
+#find_package( REQUIRED COMPONENTS thread)#Boost
 set(SRC_LIST
     ${CMAKE_CURRENT_SOURCE_DIR}/spr_client.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/common
@@ -25,7 +25,7 @@ target_compile_options(${PROJECT_NAME} PUBLIC -O -g -std=c++14)
 target_link_libraries(
     ${PROJECT_NAME}
     pthread
-    dns_sd
+    #dns_sd
     ${PROCESS_CPP_LIBRARIES}
     #${ADK_MESSAGE_SERVICE_LDFLAGS}
     # ${ADK_IPC_LIBRARIES}

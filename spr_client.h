@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include <atomic>
 #include <thread>
-#include <boost/asio.hpp>
+//#include <boost/asio.hpp>
 #include <memory>
 #include <algorithm>
 #include "common/str_compat.hpp"
@@ -26,7 +26,7 @@ public:
     
 private:
     using MdnsHandler = std::function<void(/*const boost::system::error_code& ec,*/ const std::string& host, uint16_t port)>;
-    using ResultHandler = std::function<void(const boost::system::error_code&)>;
+    //using ResultHandler = std::function<void(const boost::system::error_code&)>;
     void browseMdns(const MdnsHandler& handler);
     void connect(string host);
     Settings settings_;
